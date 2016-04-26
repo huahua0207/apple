@@ -1,0 +1,91 @@
+@import "val.less";
+*{
+  box-sizing:border-box;
+}
+[center-block]{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+[center-text]{
+  text-align: center;
+}
+ .pad(@pd){
+  padding-left:@pd;
+  padding-right:@pd;
+};
+.container{
+  &{
+    height: auto;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    display: block;
+    .pad(@pd);
+  }
+  &-fluid{
+    height:auto;
+    .pad(@pd);
+  }
+  & .row,&-fluid .row{
+    margin-left:-@pd;
+    margin-right:-@pd;
+  }
+  & .row:after,&-fluid .row:after{
+    content:"";
+    display: block;
+    clear: both;
+    height:0;
+    line-height:0;
+    font-size: 0;
+  }
+
+}
+//手机端
+.grid(@type,@i:1) when (@i<=@cols){
+   .col-@{type}-@{i}{
+     width:100%/@cols*@i;
+     display: block;
+     float: left;
+     .pad(@pd);
+   }
+   .grid(@type,@i+1);
+}
+.grid(xs);
+
+
+//大屏时  平板  小屏幕 大屏幕 的 宽
+.g(@width,@name){
+   @media screen and (min-width:@width){
+     .container{
+      width:@width - @pd * 2;
+    }
+     .grid(@name);
+   }
+
+}
+.g(@smscreen,sm);
+.g(@mdscreen,md);
+.g(@lgscreen,lg);
+@media screen and (max-width:@smscreen){
+  .row .hidden-xs{
+    display: none!important;
+  }
+}
+@media screen and (min-width:@smscreen) and (max-width:@mdscreen){
+  .row .hidden-sm{
+     display: none!important;
+   }
+}
+@media screen and (min-width:@mdscreen) and (max-width:@lgscreen){
+  .row .hidden-md{
+    display: none!important;
+  }
+}
+@media screen and (min-width:@lgscreen){
+  .row .hidden-lg{
+    display: none!important;
+  }
+}
+
+
+

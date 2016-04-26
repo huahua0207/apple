@@ -1,0 +1,661 @@
+/*屏幕阀值*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+* {
+  font-family: "微软雅黑";
+  color: #ccc;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+}
+* {
+  box-sizing: border-box;
+}
+[center-block] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+[center-text] {
+  text-align: center;
+}
+.container {
+  height: auto;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  display: block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container-fluid {
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container .row,
+.container-fluid .row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.container .row:after,
+.container-fluid .row:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+.col-xs-1 {
+  width: 5%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-2 {
+  width: 10%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-3 {
+  width: 15%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-4 {
+  width: 20%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-5 {
+  width: 25%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-6 {
+  width: 30%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-7 {
+  width: 35%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-8 {
+  width: 40%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-9 {
+  width: 45%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-10 {
+  width: 50%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-11 {
+  width: 55%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-12 {
+  width: 60%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-13 {
+  width: 65%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-14 {
+  width: 70%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-15 {
+  width: 75%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-16 {
+  width: 80%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-17 {
+  width: 85%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-18 {
+  width: 90%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-19 {
+  width: 95%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-xs-20 {
+  width: 100%;
+  display: block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 738px;
+  }
+  .col-sm-1 {
+    width: 5%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-2 {
+    width: 10%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-3 {
+    width: 15%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-4 {
+    width: 20%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-5 {
+    width: 25%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-6 {
+    width: 30%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-7 {
+    width: 35%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-8 {
+    width: 40%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-9 {
+    width: 45%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-10 {
+    width: 50%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-11 {
+    width: 55%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-12 {
+    width: 60%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-13 {
+    width: 65%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-14 {
+    width: 70%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-15 {
+    width: 75%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-16 {
+    width: 80%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-17 {
+    width: 85%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-18 {
+    width: 90%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-19 {
+    width: 95%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-sm-20 {
+    width: 100%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container {
+    width: 970px;
+  }
+  .col-md-1 {
+    width: 5%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-2 {
+    width: 10%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-3 {
+    width: 15%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-4 {
+    width: 20%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-5 {
+    width: 25%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-6 {
+    width: 30%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-7 {
+    width: 35%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-8 {
+    width: 40%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-9 {
+    width: 45%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-10 {
+    width: 50%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-11 {
+    width: 55%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-12 {
+    width: 60%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-13 {
+    width: 65%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-14 {
+    width: 70%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-15 {
+    width: 75%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-16 {
+    width: 80%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-17 {
+    width: 85%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-18 {
+    width: 90%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-19 {
+    width: 95%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-20 {
+    width: 100%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .col-lg-1 {
+    width: 5%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-2 {
+    width: 10%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-3 {
+    width: 15%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-4 {
+    width: 20%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-5 {
+    width: 25%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-6 {
+    width: 30%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-7 {
+    width: 35%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-8 {
+    width: 40%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-9 {
+    width: 45%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-10 {
+    width: 50%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-11 {
+    width: 55%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-12 {
+    width: 60%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-13 {
+    width: 65%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-14 {
+    width: 70%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-15 {
+    width: 75%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-16 {
+    width: 80%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-17 {
+    width: 85%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-18 {
+    width: 90%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-19 {
+    width: 95%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-lg-20 {
+    width: 100%;
+    display: block;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .row .hidden-xs {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .row .hidden-sm {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .row .hidden-md {
+    display: none!important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .row .hidden-lg {
+    display: none!important;
+  }
+}
